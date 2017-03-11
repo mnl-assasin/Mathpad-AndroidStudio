@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lesson_matrices"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bulsu.mathpad.activity.LessonMatricesActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/banner_matrices" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button android:visibility="visible"
+                android:id="@+id/btnMatrices"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices1"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button android:visibility="visible"
+                android:id="@+id/btnMatrices2"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices2"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button android:visibility="visible"
+                android:id="@+id/btnMatrices3"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices3"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btnMatrices4"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices4"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btnMatrices5"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices5"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btnMatrices6"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices6"
+                android:textAllCaps="false"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/btnMatrices7"
+                android:layout_width="@dimen/button_default_width"
+                android:layout_height="@dimen/button_default_height"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_default_background"
+                android:text="@string/matrices7"
+                android:textAllCaps="false"
+                android:textColor="@color/textColorBlack"
+                android:typeface="serif" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

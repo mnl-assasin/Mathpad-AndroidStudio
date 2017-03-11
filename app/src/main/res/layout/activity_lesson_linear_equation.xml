@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lesson_linear_equation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.bulsu.mathpad.activity.LessonLinearEquation">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/banner_linear_equation" />
+
+
+    <Button
+        android:id="@+id/btnLinearEQ"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="Linear Equation"
+        android:textAllCaps="false"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btnSystemLinear"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="System of Linear Equation"
+        android:textAllCaps="false"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btnDeterminants"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="System of Linear Equation in\ntwo Unknowns"
+        android:textAllCaps="false"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.bulsu.mathpad.fragment.LessonsFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/banner_main" />
+
+
+    <Button android:id="@+id/btnLinearEQ"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="System of Linear Equation"
+        android:textAllCaps="false"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+    <Button android:id="@+id/btnMatrices"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="Matrices"
+        android:textAllCaps="false"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+    <Button android:id="@+id/btnDeterminants"
+        android:layout_width="@dimen/button_default_width"
+        android:layout_height="@dimen/button_default_height"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_default_background"
+        android:text="Determinants"
+        android:textAllCaps="false"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/textColorBlack"
+        android:typeface="serif" />
+
+
+</LinearLayout>

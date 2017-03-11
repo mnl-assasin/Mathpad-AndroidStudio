@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_lessons"
+            android:icon="@drawable/ic_lessons"
+            android:title="Lessons" />
+        <item
+            android:id="@+id/menu_quizzes"
+            android:icon="@drawable/ic_quizzes"
+            android:title="Quizzes" />
+        <item
+            android:id="@+id/menu_solver"
+            android:icon="@drawable/ic_solver"
+            android:title="Solver" />
+        <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_about"
+            android:title="about" />
+    </group>
+
+</menu>

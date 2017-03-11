@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mathpad</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="matrices1">Matrices and Matrix Operation</string>
+    <string name="matrices2">Transpose of a Matrix</string>
+    <string name="matrices3">Special types of Matrices</string>
+    <string name="matrices4">Non-singular Matrices</string>
+    <string name="matrices5">Linear Systems and Inverses</string>
+    <string name="matrices6">Echelon form of a Matrix</string>
+    <string name="matrices7">Gaussian and Gauss Jordan Reduction</string>
+</resources>
