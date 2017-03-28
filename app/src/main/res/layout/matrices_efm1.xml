@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:gravity="center"
+        android:text="Echelon Form of a Matrix"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Another way of solving systems of linear equations makes use of the augmented matrix of the system.  This is done by performing some operations on the augmented matrix and later obtain a new matrix that represents a linear system that is equivalent to the original linear system."
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_solver_determinant"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/colrow_1_1"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shadow_bg2"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/colrow_1_2"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/shadow_bg2"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/colrow_2_1"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/shadow_bg2"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/colrow_2_2"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/shadow_bg2"
+                    android:gravity="center"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:onClick="clearAllDeterminant2x2"
+                android:text="Clear"
+                android:textAllCaps="false"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:onClick="solve1"
+                android:text="Solve"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="serif"
+                    android:gravity="center"
+                    android:onClick="clear3"
+                    android:text="answer"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="left"
+                    android:onClick="clear3"
+                    android:text="x=13\ny=14\nz=1"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textSize="23dp"
+                    android:textStyle="bold|italic" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

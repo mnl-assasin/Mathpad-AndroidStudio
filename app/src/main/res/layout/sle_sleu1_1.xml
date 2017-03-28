@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="The following show the graphs of the different systems.\n\n•	Independent System (Graph : Intersecting lines Unique solution)\n•	Dependent System (Graph : Coincident lines Infinitely many solution)\n•	Inconsistent system (Graph : Parallel lines No solution)\n\nThe number of solutions in a linear system in two unknowns can be determined by comparing the ratios of the coefficients. Given the system"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/pics2" />
+</LinearLayout>

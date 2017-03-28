@@ -11,4 +11,71 @@
     <string name="matrices5">Linear Systems and Inverses</string>
     <string name="matrices6">Echelon form of a Matrix</string>
     <string name="matrices7">Gaussian and Gauss Jordan Reduction</string>
+
+    <string name="solver1">System of Linear Equation</string>
+    <string name="solver2">Matrices</string>
+    <string name="solver3">Determinants</string>
+    <string name="solver4">Transpose</string>
+    <string name="solver5">Inverse</string>
+
+
+    <string name="s1_1">A <b>Linear Equation</b> is an equation in the form</string>
+    <string name="s1_2"><i>a</i><sub>1</sub><i>x</i><sub>1</sub> + <i>a</i><sub>2</sub><i>x</i><sub>2</sub> … + <i>a</i><sub>n</sub><i>x</i><sub>n</sub> = <i>b</i></string>
+    <string name="s1_3">Where <i>a</i><sub>1</sub>,<i>a</i><sub>1</sub>, … <i>a</i><sub>n</sub> and <i>b</i> are constants and <i>x</i><sub>1</sub>,<i>x</i><sub>1</sub>, … <i>x</i><sub>n</sub> are the variables. A linear equation may have one variable, two variables, three variables or more. The following are examples of linear equation:</string>
+    <string name="s1_4">5x + 8 = 2x – 4\n
+				        x – 9y = 7(x-1) + 12\n
+				        3x – 5y + 13z = 23\n
+                        2<i>x</i><sub>1</sub> + 8<i>x</i><sub>2</sub> + <i>x</i><sub>3</sub> + 4<i>x</i><sub>4</sub> = 1</string>
+    <string name="s1_5">A solution to a linear equation is a sequence of n numbers <i>s</i><sub>1</sub>,<i>s</i><sub>1</sub>, … <i>s</i><sub>n</sub> which when substituted in place of the variables will satisfy the equation. In the equation 5x + 8 = 2x – 4 , we say that -4 is the solution to the equation. In the equation 2x<sub>1</sub> + 8x<sub>2</sub> + x<sub>3</sub> - 4x<sub>4</sub> = 1, x<sub>1</sub> = 2, x<sub>2</sub> = 0, x<sub>3</sub> = 1, x<sub>4</sub> = 1 is a solution to the equation since</string>
+    <string name="s1_6">a<sub>1</sub>x + b<sub>1</sub>y = c<sub>1</sub>\na<sub>2</sub>x + b<sub>2</sub>y = c<sub>2</sub></string>
+    <string name="s1_7">An independent system of linear equation is a system that has exactly one solution, that is, the ordered pair that corresponds to the point of intersection of the two lines.
+\nA dependent system of linear equations is a system that has infinitely many solutions, that is, all the ordered pairs corresponding to all the points on the line.
+\nAn inconsistent system is a system of linear equations that has no solution.
+\nThe following show the graphs of the different systems.\n
+•	Independent System (Graph : Intersecting lines Unique solution)
+•	Dependent System (Graph : Coincident lines Infinitely many solution)
+•	Inconsistent system (Graph : Parallel lines No solution)
+\nThe number of solutions in a linear system in two unknowns can be determined by comparing the ratios of the coefficients. Given the system
+</string>
+
+    <string name="mam_1">Each number in matrix A is called an entry of the matrix. A matrix that has m rows and n columns is called an m by n matrix. We can write it as m x n matrix. If the number of rows and in matrix is equal to the number of columns, that is m = n, then we say that the matrix is a square matrix of order n.</string>
+    <string name="mam_1_1">The elements a<sub>11</sub>,a<sub>12</sub>,…a<sub>nn</sub>n are the entries in the main diagonal of a square matrix. The element a<sub>ij</sub> is the entry in the ith row and jth column or we can also write A = [a(a<sub>ij</sub> )]. A matrix that has m rows and n  columns can be denoted by A<sub>mn</sub> or simply A<sub>n</sub> if it is n x n.</string>
+    <string name="mam_2">In the examples above, matrix A has 3 row and 3 columns, thus it is 3 x 3; matrix B is 2 x 2; matrix C is 1 x 3; matrix D is 4 x 1; matrix E is 2 x 3. In A, a<sub>12</sub> = 5; in B, b<sub>22</sub> =  5; in C, c<sub>13</sub> = 0; in D, d<sub>41</sub> = 1; and in E, e<sub>23</sub> = 4.\n\nDefinition: Matrix A = [a(a<sub>ij</sub> )] and B = [b(b<sub>ij</sub> )] are equal  if they have the same entries.</string>
+    <string name="mam_3">If A = [a(a_ij )] and B = [b(b_ij )] are both m x n matrices, then the sum A + B is an m x n matrix C = [c(c_ij )]. To get the sum of A and B, simply add corresponding entries. Remember that only matrices that are of the same size can be added.</string>
+    <string name="mam_4">If A = [a(a_ij )] is an m x n matrix and r is a real number (called a scalar), then the scalar multiple r A is the matrix C = [c(c_ij )] whose entries are obtained by multiplying each entry of A by r.</string>
+    <string name="mam_5">If A and B are both m x n matrices, then A + (-1)B = A – B (called the difference between A and B).</string>
+    <string name="mam_6">If A = [a(a_ij )] is an m x n matrix and B = [b(b_ij )] is an n x p matrix, then the product AB is defined. AB = C = [c(c_ij )] which is an m x p matrix. The (i,j) entry in C is obtained by using the ith row of A and the jth column of B. Note that two matrices can only be multiplied if the number  of columns of first matrix is equal to the number of rows of the second matrix.</string>
+    <string name="mam_7">If A is an m x n matrix and B is an n x p matrix, then\n\n•	AB is defined whose size is m x p;\n•	BA may not be defined (if p ≠ m);\n•	If BA is defined, BA will be n x n and AB will be m x m and if m ≠ n, AB and BA are of different sizes; and\n•	If BA and AB are of the same size, they may be unequal.</string>
+    <string name="mam_8">Examples:\n1.	If A is 3 x 2 and B is 2 x 4, then AB is 3 x 4 and BA is not defined.\n2.	If A is 3 x 2 and B is 2 x 3, then AB is 3 x 3 and BA is 2 x 2.\n3.	If A is 2 x 2 and B is 2 x 2, then AB is 2 x 2 and BA is 2 x 2.</string>
+
+    <string name="tom_1">If A = [■(a_ij )] is an m x n matrix, then the transpose of A, A^T =[■(〖a^T〗_ij )], is the n x m matrix defined by  〖a^T〗_ij  =■(a_ij ). The transpose of A is obtained from A by interchanging the rows and columns of A.</string>
+
+    <string name="stm_1">A. Zero Matrix</string>
+    <string name="stm_2">A zero matrix (O_mn) is a matrix all of whose entries are zero.</string>
+    <string name="stm_3">B. Diagonal Matrix</string>
+    <string name="stm_4">A diagonal matrix is an n x n matrix A = [■(a_ij )] such that a_ij = 0 for i ≠ j. In a diagonal matrix, the entries off the main diagonal are all zero.</string>
+    <string name="stm_5">C. Scalar Matrix</string>
+    <string name="stm_6">A scalar matrix is a diagonal matrix where the elements in the main diagonal are equal.</string>
+    <string name="stm_7">D. Identity Matrix</string>
+    <string name="stm_8">An identity matrix is a scalar matrix where the entries in the main diagonal are all 1.</string>
+    <string name="stm_9">E. Upper Triangular</string>
+    <string name="stm_10">A n x m matrix A = [■(a_ij )] is called upper triangular if a_ij = 0 for i > j.</string>
+    <string name="stm_11">F. Lower Triangular</string>
+    <string name="stm_12">A n x n matrix A = [■(a_ij )] is called upper triangular if a_ij = 0 for i &lt; j.</string>
+    <string name="stm_13">G. Symmetric</string>
+    <string name="stm_14">Matrix A is said to be symmetric if A^T = A. In a symmetric matrix, entries are symmetric with respect to the main diagonal.</string>
+    <string name="stm_15">H. Skew Symmetric</string>
+    <string name="stm_16">Matrix A is said to be symmetric if A^T = -A. In a skew symmetric matrix, all the entries in the main diagonal are zero.</string>
+
+
+    <string name="nsm_1">A nonsingular  matrices  is a special type of a square matrix. Matrix  A is said to be nonsingular matrix or invertible if there exists an n x n matrix B such that AB = BA = In . We call B an inverse of A. If B does not exist, then A is singular or noninvertible. </string>
+    <string name="nsm_2">Getting the product AB gives us the product BA which is also the identity matrix. Therefore we say that B is  inverse of A and A is nonsingular.</string>
+    <string name="nsm_3">Theorems on Nonsingular Matrices</string>
+    <string name="nsm_4">From this we obtain the linear systems</string>
+    <string name="nsm_5">Solving the systems we get a = 2, b = -3, c = -1 and d = 2, giving us </string>
+    <string name="nsm_6">b. If A and B are both nonsingular n x n matrices, then AB is nonsingular and  (AB)-1  =  B-1A-1.   Verify using</string>
+    <string name="nsm_7">c. If A is a non-singular matrix, then A-1 is a non-singular (A-1)-1 = A. Verify.</string>
+    <string name="nsm_8">d. If A is a non-singular matrix, then AT is a non-singular and (A-1)T = (AT)-1. Verify.</string>
+
+
 </resources>

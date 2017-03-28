@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
+        android:gravity="center"
+        android:text="Gaussian and Gauss Jordan Reduction"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Solving Linear System"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Systems of linear equations can be solved using matrices. We start with the matrix form of the system, AX = B. Using the augmented matrix [ A ⋮ B ], we obtain a partitioned matrix [ C ⋮ D ] which is either in row echelon form or reduced row echelon form which is row equivalent to [ A ⋮ B ]. The partitioned matrix [ C ⋮ D ] represents the linear system  CX = D whose set of solutions is also the set of solutions to AX = B."
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="The following are the two methods of solving linear systems:"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+
+</LinearLayout>

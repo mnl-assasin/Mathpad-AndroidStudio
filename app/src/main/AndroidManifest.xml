@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bulsu.mathpad">
 
+    <!-- android:icon="@drawable/mathpad_icon" -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,20 +10,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.main.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.LessonLinearEquation" />
-        <activity android:name=".activity.LessonMatricesActivity" />
-        <activity android:name=".activity.LessonDeterminantsActivity" />
+        <activity android:name=".activity.main.LessonLinearEquation" />
+        <activity android:name=".activity.main.LessonMatricesActivity" />
+        <activity android:name=".activity.main.LessonDeterminantsActivity" />
         <activity android:name=".activity.lesson.linearequation.LinearEquationActivity" />
         <activity android:name=".activity.lesson.linearequation.SystemLinearEquationActivity" />
         <activity android:name=".activity.lesson.linearequation.SystemLinearUnknownsActivity" />
-        <activity android:name=".activity.lesson.DeterminantsActivity"></activity>
+        <activity android:name=".activity.lesson.matrices.MatricesAndMatrixActivity" />
+        <activity android:name=".activity.lesson.matrices.TransposeMatrixActivity" />
+        <activity android:name=".activity.lesson.matrices.SpecialTypeMatrixActivity" />
+        <activity android:name=".activity.lesson.matrices.NonsingularMatricesActivity" />
+        <activity android:name=".activity.lesson.matrices.LinearSystemInversesActivity" />
+        <activity android:name=".activity.lesson.matrices.EchelonFormMatrixActivity" />
+        <activity android:name=".activity.lesson.matrices.GaussianGaussJordanActivity" />
+        <activity android:name=".activity.lesson.DeterminantsActivity" />
+        <activity android:name=".activity.solver.SolverDeterminantList" />
+        <activity android:name=".activity.solver.SolverInverseList" />
+        <activity android:name=".activity.solver.SolverLinearEquationList" />
+        <activity android:name=".activity.solver.SolverMatrixList" />
+        <activity android:name=".activity.solver.SolverTranspose" />
+        <activity android:name=".activity.solver.determinant.SolverDeterminant" />
+        <activity android:name=".activity.solver.determinant.SolverDeterminant2" />
+        <activity android:name=".activity.solver.determinant.SolverDeterminant3" />
+        <activity android:name=".activity.solver.inverse.SolverInverse" />
+        <activity android:name=".activity.solver.inverse.SolverInverse2" />
+        <activity android:name=".activity.solver.inverse.SolverInverse3" />
+        <activity android:name=".activity.solver.linearequation.SolverLinearEquation" />
+        <activity android:name=".activity.solver.linearequation.SolverLinearEquation2" />
+        <activity android:name=".activity.solver.linearequation.SolverLinearEquation3" />
+        <activity android:name=".activity.solver.matrices.SolverMatricesMultiplication" />
+        <activity android:name=".activity.solver.matrices.SolverMatrix" />
+        <activity android:name=".activity.solver.matrices.SolverMatrix2" />
+        <activity android:name=".activity.solver.matrices.SolverMatrix3" />
+        <activity android:name=".activity.lesson.linearequation.WordProblemActivity"></activity>
     </application>
 
 </manifest>

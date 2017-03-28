@@ -10,9 +10,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.bulsu.mathpad.R;
-import com.bulsu.mathpad.activity.LessonDeterminantsActivity;
-import com.bulsu.mathpad.activity.LessonLinearEquation;
-import com.bulsu.mathpad.activity.LessonMatricesActivity;
+import com.bulsu.mathpad.activity.lesson.DeterminantsActivity;
+import com.bulsu.mathpad.activity.main.LessonLinearEquation;
+import com.bulsu.mathpad.activity.main.LessonMatricesActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -61,7 +61,7 @@ public class LessonsFragment extends Fragment {
                 startActivity(new Intent(getActivity(), LessonMatricesActivity.class));
                 break;
             case R.id.btnDeterminants:
-                startActivity(new Intent(getActivity(), LessonDeterminantsActivity.class));
+                startActivity(new Intent(getActivity(), DeterminantsActivity.class));
                 break;
         }
     }

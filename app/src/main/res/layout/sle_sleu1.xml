@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Systems of Linear Equations in two Unknowns"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A system of linear equations in two unknowns is a linear system in the form"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/s1_6"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An independent system of linear equation is a system that has exactly one solution, that is, the ordered pair that corresponds to the point of intersection of the two lines.\n\nA dependent system of linear equations is a system that has infinitely many solutions, that is, all the ordered pairs corresponding to all the points on the line.\n\nAn inconsistent system is a system of linear equations that has no solution.\n\n"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <!--The following show the graphs of the different systems.\n\n•	Independent System (Graph : Intersecting lines Unique solution)\n•	Dependent System (Graph : Coincident lines Infinitely many solution)\n•	Inconsistent system (Graph : Parallel lines No solution)\n\nThe number of solutions in a linear system in two unknowns can be determined by comparing the ratios of the coefficients. Given the system"-->
+</LinearLayout>
