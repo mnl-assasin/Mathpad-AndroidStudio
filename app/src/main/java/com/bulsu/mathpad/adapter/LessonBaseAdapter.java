@@ -27,7 +27,7 @@ public class LessonBaseAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
 
         Bundle b = new Bundle();
-        b.putInt("layout", layoutResourceId[position]);
+        b.putInt("drawableId", layoutResourceId[position]);
 
         LessonBaseFragment fragment = new LessonBaseFragment();
         fragment.setArguments(b);

@@ -11,11 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import Jama.Matrix;
+
 public class SolverLinearEquation2 extends AppCompatActivity {
     TextView tv_ans;
     double[][] var;
@@ -91,47 +93,30 @@ public class SolverLinearEquation2 extends AppCompatActivity {
             ansText = "x = " + df.format(ans.get(0, 0));
         }
         else {
-            ansText = "x = " + df2.format(ans.get(0, 0));
+            ansText = "x = " + Fractions.convertDecimalToFraction(ans.get(0, 0));
         }
 
         if ((Double.parseDouble(df2.format(ans.get(1, 0))) % 1) == 0) {
             ansText = ansText + "\ny = " + df.format(ans.get(1, 0));
         } else {
-            ansText = ansText + "\ny = " + df2.format(ans.get(1, 0));
+            ansText = ansText + "\ny = " + Fractions.convertDecimalToFraction(ans.get(1, 0));
         }
 
         if ((Double.parseDouble(df2.format(ans.get(2, 0))) % 1) == 0) {
             ansText = ansText + "\nz = " + df.format(ans.get(2, 0));
         } else {
-            ansText = ansText + "\nz = " + df2.format(ans.get(2, 0));
+            ansText = ansText + "\nz = " + Fractions.convertDecimalToFraction(ans.get(2, 0));
         }
 
 
         if ((Double.parseDouble(df2.format(ans.get(3, 0))) % 1) == 0) {
             ansText = ansText + "\nw = " + df.format(ans.get(3, 0));
         } else {
-            ansText = ansText + "\nw = " + df2.format(ans.get(3, 0));
+            ansText = ansText + "\nw = " + Fractions.convertDecimalToFraction(ans.get(3, 0));
         }
         return ansText;
     }
 
-
-    public void sample() {
-        double[][] lhsArray = {{4, 3, -4}, {6, -3, 2}, {3, -2, 1}};
-        double[] rhsArray = {-11, 15, 10};
-//        double[][] lhsArray = {{2, -1}, {1, 3}};
-//        double[] rhsArray = {9, 1};
-        DecimalFormat df = new DecimalFormat("0.0000");
-        //Creating Matrix Objects with arrays
-        Matrix lhs = new Matrix(lhsArray);
-        Matrix rhs = new Matrix(rhsArray, 3);
-        //Calculate Solved Matrix
-        Matrix ans = lhs.solve(rhs);
-        //Printing Answers
-//        tv_ans= (TextView) findViewById(R.id.textView7);
-//        tv_ans.setText(solve(lhsArray,rhsArray,3));
-//        tv_ans.setText("x = " + df.format(ans.get(0, 0))+"\n"+"y = " + df.format(ans.get(1, 0))+"\n");
-    }
 
     public void clear(View v) {
         for (int i = 0; i < 20; i++) {
@@ -161,6 +146,7 @@ public class SolverLinearEquation2 extends AppCompatActivity {
             linear.setVisibility(View.VISIBLE);
         } catch (Exception e) {
             Toast.makeText(this, "linear equation is not possible to solve", Toast.LENGTH_SHORT).show();
+
         }
         View view = this.getCurrentFocus();
         if (view != null) {

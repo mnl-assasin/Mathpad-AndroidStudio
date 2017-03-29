@@ -20,7 +20,6 @@ public class LinearEquationActivity extends AppCompatActivity {
     ViewPager pager;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,22 +43,13 @@ public class LinearEquationActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    LessonBaseAdapter adapter;
-
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2","Page 3", "Page 4","Page 5", "Page 6","Page 7"};
-        int layoutResourceId[] = {R.layout.sle_le1, R.layout.sle_le2, R.layout.activity_system_linear_equation, R.layout.sle_sleu1, R.layout.sle_sleu1_1, R.layout.sle_sleu2, R.layout.sle_sleu3};
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8", "Page 9", "Page 10"};
 
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        int id[] = {R.drawable.s1_1, R.drawable.s1_2, R.drawable.s1_3, R.drawable.s1_4, R.drawable.s1_5, R.drawable.s1_6, R.drawable.s1_7, R.drawable.s1_8, R.drawable.s1_9, R.drawable.s1_10};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

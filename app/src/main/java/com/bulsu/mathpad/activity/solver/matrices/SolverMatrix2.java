@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -248,7 +249,7 @@ public class SolverMatrix2 extends AppCompatActivity {
                 answer.get(i).setText(df.format(a)+"");
             }
             else{
-                answer.get(i).setText(df2.format(a)+"");
+                answer.get(i).setText(Fractions.convertDecimalToFraction(a)+"");
             }
         }
         linearAnswer.setVisibility(View.VISIBLE);
@@ -264,7 +265,7 @@ public class SolverMatrix2 extends AppCompatActivity {
                 answer.get(i).setText(df.format(a)+"");
             }
             else{
-                answer.get(i).setText(df2.format(a)+"");
+                answer.get(i).setText(Fractions.convertDecimalToFraction(a)+"");
             }
         }
         linearAnswer.setVisibility(View.VISIBLE);

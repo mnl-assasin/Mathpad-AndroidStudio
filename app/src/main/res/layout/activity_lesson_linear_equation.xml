@@ -19,18 +19,6 @@
         android:src="@drawable/banner_linear_equation" />
 
 
-    <Button
-        android:id="@+id/btnLinearEQ"
-        android:layout_width="@dimen/button_default_width"
-        android:layout_height="@dimen/button_default_height"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/button_default_background"
-        android:text="Linear Equation"
-        android:textAllCaps="false"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:textColor="@color/textColorBlack"
-        android:typeface="serif"
-        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnSystemLinear"
@@ -43,19 +31,6 @@
         android:textAppearance="?android:textAppearanceMedium"
         android:textColor="@color/textColorBlack"
         android:typeface="serif" />
-
-    <Button
-        android:id="@+id/btnDeterminants"
-        android:layout_width="@dimen/button_default_width"
-        android:layout_height="@dimen/button_default_height"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/button_default_background"
-        android:text="System of Linear Equation in\ntwo Unknowns"
-        android:textAllCaps="false"
-        android:textColor="@color/textColorBlack"
-        android:typeface="serif"
-        android:visibility="gone" />
-
 
     <Button
         android:id="@+id/btnWordProblems"

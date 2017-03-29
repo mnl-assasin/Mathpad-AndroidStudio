@@ -43,23 +43,12 @@ public class LinearSystemInversesActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    LessonBaseAdapter adapter;
-
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5"};
-        int layoutResourceId[] = {R.layout.matrix_lsi1, R.layout.matrix_lsi2,
-                R.layout.matrix_lsi3, R.layout.matrix_lsi4, R.layout.matrix_lsi5};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4"};
+        int id[] = {R.drawable.m5_1, R.drawable.m5_2, R.drawable.m5_3, R.drawable.m5_4};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

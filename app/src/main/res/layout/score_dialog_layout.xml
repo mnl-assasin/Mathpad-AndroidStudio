@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
     android:orientation="vertical">
 
     <TextView
@@ -15,13 +14,13 @@
         android:textStyle="bold|italic" />
 
     <TextView
-        android:id="@+id/tv_score"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
         android:gravity="center"
         android:text="1/15"
+        android:id="@+id/tv_score"
         android:textColor="#000"
         android:textSize="90dp"
         android:textStyle="bold|italic" />

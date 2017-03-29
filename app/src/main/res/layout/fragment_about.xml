@@ -1,13 +1,44 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context="com.bulsu.mathpad.fragment.AboutFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/mathpad_icon" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_marginBottom="32dp"
+        android:layout_height="wrap_content"
+        android:text="@string/about_desc"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="wrap_content" android:text="Developer" android:textColor="#fff" android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content" android:text="Aira Morela S. Tolentino" android:textColor="#fff"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content" android:text="Clarence Anne S. de Leon" android:textColor="#fff"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content" android:text="Erika Mae C. de Guzman " android:textColor="#fff"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content" android:text="Joana Marie M. Jacob" android:textColor="#fff"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

@@ -42,22 +42,12 @@ public class WordProblemActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    LessonBaseAdapter adapter;
-
     private void setupPager() {
 
         CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4"};
-        int layoutResourceId[] = {R.layout.wp1, R.layout.wp2, R.layout.wp3, R.layout.wp4};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        int id[] = {R.drawable.wp1, R.drawable.wp2, R.drawable.wp3, R.drawable.wp4};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

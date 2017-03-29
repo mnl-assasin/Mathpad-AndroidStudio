@@ -9,7 +9,6 @@ import android.widget.Button;
 
 import com.bulsu.mathpad.R;
 import com.bulsu.mathpad.activity.lesson.linearequation.LinearEquationActivity;
-import com.bulsu.mathpad.activity.lesson.linearequation.SystemLinearUnknownsActivity;
 import com.bulsu.mathpad.activity.lesson.linearequation.WordProblemActivity;
 
 import butterknife.Bind;
@@ -18,12 +17,9 @@ import butterknife.OnClick;
 
 public class LessonLinearEquation extends AppCompatActivity {
 
-    @Bind(R.id.btnLinearEQ)
-    Button btnLinearEQ;
     @Bind(R.id.btnSystemLinear)
     Button btnSystemLinear;
-    @Bind(R.id.btnDeterminants)
-    Button btnDeterminants;
+
     @Bind(R.id.btnWordProblems)
     Button btnWordProblems;
 
@@ -49,18 +45,14 @@ public class LessonLinearEquation extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.btnLinearEQ, R.id.btnSystemLinear, R.id.btnDeterminants, R.id.btnWordProblems})
+    @OnClick({ R.id.btnSystemLinear, R.id.btnWordProblems})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnLinearEQ:
-                startActivity(new Intent(getApplicationContext(), LinearEquationActivity.class));
-                break;
+
             case R.id.btnSystemLinear:
                 startActivity(new Intent(getApplicationContext(), LinearEquationActivity.class));
                 break;
-            case R.id.btnDeterminants:
-                startActivity(new Intent(getApplicationContext(), SystemLinearUnknownsActivity.class));
-                break;
+
             case R.id.btnWordProblems:
                 startActivity(new Intent(getApplicationContext(), WordProblemActivity.class));
                 break;

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import org.apache.commons.math3.linear.LUDecomposition;
 import org.apache.commons.math3.linear.MatrixUtils;
@@ -73,9 +74,9 @@ public class SolverInverse3 extends AppCompatActivity {
     }
 
 
-    public void onClickSolveinverse2(View v)
+    public void onClickSolveinverse3(View v)
     {
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < numbers1.size(); i++) {
             if (numbers1.get(i).getText().toString().equals("")) {
                 Toast.makeText(this, "please fill up the blank spaces", Toast.LENGTH_SHORT).show();
                 return;
@@ -104,7 +105,7 @@ public class SolverInverse3 extends AppCompatActivity {
                     if (((Double.parseDouble(df2.format(b[i][j])) % 1) == 0)) {
                         answer.get(count).setText(df.format(b[i][j]));
                     } else {
-                        answer.get(count).setText(df2.format(b[i][j]));
+                        answer.get(count).setText(Fractions.convertDecimalToFraction(b[i][j])+"");
                     }
                     count++;
                 }
@@ -130,14 +131,14 @@ public class SolverInverse3 extends AppCompatActivity {
         }
     }
 
-    public void clearInverse2(View v)
+    public void clearInverse3(View v)
     {
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < numbers1.size(); i++) {
             numbers1.get(i).setText("");
         }
     }
 
-    public void clearAllInverse2(View v)
+    public void clearAllInverse3(View v)
     {
         linearAnswer.setVisibility(View.GONE);
         mScrollView.post(new Runnable() {

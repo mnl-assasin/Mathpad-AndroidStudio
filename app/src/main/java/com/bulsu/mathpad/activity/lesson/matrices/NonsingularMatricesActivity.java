@@ -47,18 +47,10 @@ public class NonsingularMatricesActivity extends AppCompatActivity {
 
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5"};
-        int layoutResourceId[] = {R.layout.matrices_nsm1, R.layout.matrices_nsm1_1, R.layout.matrices_nsm2, R.layout.matrices_nsm4, R.layout.matrices_nsm5};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4"};
+        int id[] = {R.drawable.m4_1, R.drawable.m4_2, R.drawable.m4_3, R.drawable.m4_4};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

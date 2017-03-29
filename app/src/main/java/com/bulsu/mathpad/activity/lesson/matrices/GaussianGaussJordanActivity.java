@@ -42,24 +42,13 @@ public class GaussianGaussJordanActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    LessonBaseAdapter adapter;
-
+    
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8"};
-        int layoutResourceId[] = {R.layout.matrices_ggj1, R.layout.matrices_ggj2, R.layout.matrices_ggj3, R.layout.matrices_ggj4,
-                R.layout.matrices_ggj5, R.layout.matrices_ggj6, R.layout.matrices_ggj7, R.layout.matrices_ggj8};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5"};
+        int id[] = {R.drawable.m7_1, R.drawable.m7_2, R.drawable.m7_3, R.drawable.m7_4, R.drawable.m7_5};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

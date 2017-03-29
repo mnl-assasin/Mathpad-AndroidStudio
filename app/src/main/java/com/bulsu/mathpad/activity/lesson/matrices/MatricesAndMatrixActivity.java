@@ -42,24 +42,13 @@ public class MatricesAndMatrixActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    LessonBaseAdapter adapter;
-
+    
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7"};
-        int layoutResourceId[] = {R.layout.matrices_mam1, R.layout.matrices_mam1_1, R.layout.matrices_mam2,
-                R.layout.matrices_mam3, R.layout.matrices_mam3_1, R.layout.matrices_mam4, R.layout.matrices_mam5};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3"};
+        int id[] = {R.drawable.m1_1, R.drawable.m1_2, R.drawable.m1_3};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }

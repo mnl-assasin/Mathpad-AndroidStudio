@@ -105,16 +105,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.menu_lessons:
                 mFragment = new LessonsFragment();
+                title = "Choose a Lesson";
                 break;
             case R.id.menu_quizzes:
 //                mFragment = new QuizzesFragment();
                 mFragment = new FragmentQuiz2();
+                title = "Choose a Quiz";
                 break;
             case R.id.menu_solver:
                 mFragment = new SolverFragment();
+                title = "Solver";
                 break;
             case R.id.menu_about:
                 mFragment = new AboutFragment();
+                title = "About";
                 break;
         }
 
@@ -122,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (mFragment != null) {
             mFragmentTransaction.replace(R.id.fragmentLayout, mFragment);
             mFragmentTransaction.commit();
-//            setTitle(title);
+            setTitle(title);
         }
         item.setChecked(true);
         drawerLayout.closeDrawers();

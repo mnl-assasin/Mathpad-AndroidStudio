@@ -77,5 +77,6 @@
     <string name="nsm_7">c. If A is a non-singular matrix, then A-1 is a non-singular (A-1)-1 = A. Verify.</string>
     <string name="nsm_8">d. If A is a non-singular matrix, then AT is a non-singular and (A-1)T = (AT)-1. Verify.</string>
 
+    <string name="about_desc">This application features lessons, quizzes and solver for college students taking up linear algebra. This can be use offline.</string>
 
 </resources>

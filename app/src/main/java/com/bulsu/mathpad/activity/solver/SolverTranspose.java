@@ -13,9 +13,7 @@ import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
 
-
 public class SolverTranspose extends AppCompatActivity {
-
 
 
     LinearLayout linear;
@@ -63,8 +61,7 @@ public class SolverTranspose extends AppCompatActivity {
     public void display(View v) {
 
 
-        if (column.getText().toString().equalsIgnoreCase("")&&row.getText().toString().equalsIgnoreCase(""))
-        {
+        if (column.getText().toString().equalsIgnoreCase("") && row.getText().toString().equalsIgnoreCase("")) {
             Toast.makeText(SolverTranspose.this, "Please enter column size and row size", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -107,15 +104,14 @@ public class SolverTranspose extends AppCompatActivity {
         clear.setVisibility(View.VISIBLE);
         View view = this.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
 
     }
 
 
-    public void clear(View v)
-    {
+    public void clear(View v) {
         for (int i = 0; i < columnSize; i++) {
             for (int j = 0; j < rowSize; j++) {
                 number[i][j].setText("");
@@ -123,8 +119,7 @@ public class SolverTranspose extends AppCompatActivity {
         }
     }
 
-    public void clearAll(View v)
-    {
+    public void clearAll(View v) {
         for (int i = 0; i < columnSize; i++) {
             for (int j = 0; j < rowSize; j++) {
                 number[i][j].setText("");
@@ -135,7 +130,7 @@ public class SolverTranspose extends AppCompatActivity {
 
     public void transpose(View v) {
 
-       ans = new double[columnSize][rowSize];
+        ans = new double[columnSize][rowSize];
         for (int i = 0; i < columnSize; i++) {
             for (int j = 0; j < rowSize; j++) {
 
@@ -148,17 +143,17 @@ public class SolverTranspose extends AppCompatActivity {
         }
 
         value = new double[rowSize][columnSize];
-        value=transposeMatrix(ans);
+        value = transposeMatrix(ans);
 
         for (int i = 0; i < value.length; i++) {
             for (int j = 0; j < value[0].length; j++) {
-              answers[i][j].setVisibility(View.GONE);
+                answers[i][j].setVisibility(View.GONE);
             }
         }
 
         for (int i = 0; i < value.length; i++) {
             for (int j = 0; j < value[0].length; j++) {
-                answers[i][j].setText(((int)value[i][j])+"");
+                answers[i][j].setText(((int) value[i][j]) + "");
                 answers[i][j].setVisibility(View.VISIBLE);
 
             }
@@ -166,7 +161,7 @@ public class SolverTranspose extends AppCompatActivity {
         linear.setVisibility(View.VISIBLE);
         View view = this.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }

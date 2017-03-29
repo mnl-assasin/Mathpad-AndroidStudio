@@ -42,23 +42,14 @@ public class SpecialTypeMatrixActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    LessonBaseAdapter adapter;
-
+    
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5"};
-        int layoutResourceId[] = {R.layout.matrices_stm1, R.layout.matrices_stm2,R.layout.matrices_stm2_2, R.layout.matrices_stm3, R.layout.matrices_stm4};
-
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3"};
+        int id[] = {R.drawable.m3_1, R.drawable.m3_2, R.drawable.m3_3};
+        LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
+
     }
 }

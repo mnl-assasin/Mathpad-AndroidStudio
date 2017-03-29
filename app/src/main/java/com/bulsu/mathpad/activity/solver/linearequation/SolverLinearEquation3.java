@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -58,13 +59,13 @@ public class SolverLinearEquation3 extends AppCompatActivity {
             ansText = "x = " + df.format(ans.get(0, 0));
         }
         else {
-            ansText = "x = " + df2.format(ans.get(0, 0));
+            ansText = "x = " + Fractions.convertDecimalToFraction(ans.get(0, 0));
         }
 
         if ((Double.parseDouble(df2.format(ans.get(1, 0))) % 1) == 0) {
             ansText = ansText + "\ny = " + df.format(ans.get(1, 0));
         } else {
-            ansText = ansText + "\ny = " + df2.format(ans.get(1, 0));
+            ansText = ansText + "\ny = " + Fractions.convertDecimalToFraction(ans.get(1, 0));
         }
 
         return ansText;

@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -95,7 +96,7 @@ public class SolverDeterminant2 extends AppCompatActivity {
         if ((answer1 % 1) == 0) {
             ansText = df.format(answer1);
         } else {
-            ansText = df2.format(answer1);
+            ansText = Fractions.convertDecimalToFraction(answer1);
         }
 
 

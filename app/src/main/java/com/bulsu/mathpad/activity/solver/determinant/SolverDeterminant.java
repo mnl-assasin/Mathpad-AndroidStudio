@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -70,6 +71,7 @@ public class SolverDeterminant extends AppCompatActivity {
 
     public void solve1(View v) {
 
+
         for (int i = 0; i < numbers1.size(); i++) {
             if (numbers1.get(i).getText().toString().equals("")) {
                 Toast.makeText(SolverDeterminant.this, "please fill up the blank spaces", Toast.LENGTH_SHORT).show();
@@ -89,7 +91,7 @@ public class SolverDeterminant extends AppCompatActivity {
         if ((answer1 % 1) == 0) {
             ansText = df.format(answer1);
         } else {
-            ansText = df2.format(answer1);
+            ansText = Fractions.convertDecimalToFraction(answer1);
         }
         tv_ans.setText(ansText+"");
         linear.setVisibility(View.VISIBLE);

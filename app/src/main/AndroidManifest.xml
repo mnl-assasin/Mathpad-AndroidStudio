@@ -5,7 +5,7 @@
     <!-- android:icon="@drawable/mathpad_icon" -->
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/mathpad_icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -23,8 +23,6 @@
         <activity android:name=".activity.main.LessonMatricesActivity" />
         <activity android:name=".activity.main.LessonDeterminantsActivity" />
         <activity android:name=".activity.lesson.linearequation.LinearEquationActivity" />
-        <activity android:name=".activity.lesson.linearequation.SystemLinearEquationActivity" />
-        <activity android:name=".activity.lesson.linearequation.SystemLinearUnknownsActivity" />
         <activity android:name=".activity.lesson.matrices.MatricesAndMatrixActivity" />
         <activity android:name=".activity.lesson.matrices.TransposeMatrixActivity" />
         <activity android:name=".activity.lesson.matrices.SpecialTypeMatrixActivity" />

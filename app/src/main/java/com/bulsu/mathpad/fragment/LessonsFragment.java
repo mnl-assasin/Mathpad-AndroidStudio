@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.bulsu.mathpad.R;
-import com.bulsu.mathpad.activity.lesson.DeterminantsActivity;
+import com.bulsu.mathpad.activity.main.LessonDeterminantsActivity;
 import com.bulsu.mathpad.activity.main.LessonLinearEquation;
 import com.bulsu.mathpad.activity.main.LessonMatricesActivity;
 
@@ -61,7 +61,7 @@ public class LessonsFragment extends Fragment {
                 startActivity(new Intent(getActivity(), LessonMatricesActivity.class));
                 break;
             case R.id.btnDeterminants:
-                startActivity(new Intent(getActivity(), DeterminantsActivity.class));
+                startActivity(new Intent(getActivity(), LessonDeterminantsActivity.class));
                 break;
         }
     }

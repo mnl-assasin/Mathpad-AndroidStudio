@@ -13,8 +13,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
+
+
 public class SolverMatricesMultiplication extends AppCompatActivity {
     LinearLayout linear;
     EditText[][] number;
@@ -232,7 +235,7 @@ public class SolverMatricesMultiplication extends AppCompatActivity {
                         answers[c][d].setText(df.format(multiply[c][d]) + "");
                         answers[c][d].setVisibility(View.VISIBLE);
                     } else {
-                        answers[c][d].setText(df2.format(multiply[c][d]) + "");
+                        answers[c][d].setText(Fractions.convertDecimalToFraction(multiply[c][d]) + "");
                         answers[c][d].setVisibility(View.VISIBLE);
                     }
                     count++;
@@ -274,13 +277,13 @@ public class SolverMatricesMultiplication extends AppCompatActivity {
     }
 
     public void clearAll(View v) {
-        for (int i = 0; i < columnSize; i++) {
-            for (int j = 0; j < rowSize; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
                 number[i][j].setText("");
             }
         }
-        for (int i = 0; i < columnSize2; i++) {
-            for (int j = 0; j < rowSize2; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
                 number2[i][j].setText("");
             }
         }

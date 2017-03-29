@@ -3,6 +3,7 @@ package com.bulsu.mathpad.activity.solver.linearequation;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -64,19 +66,19 @@ public class SolverLinearEquation extends AppCompatActivity {
             if ((Double.parseDouble(df2.format(ans.get(0, 0))) % 1) == 0) {
                 ansText = "x = " + df.format(ans.get(0, 0));
             } else {
-                ansText = "x = " + df2.format(ans.get(0, 0));
+                ansText = "x = " + Fractions.convertDecimalToFraction(ans.get(0, 0));
             }
 
             if ((Double.parseDouble(df2.format(ans.get(1, 0))) % 1) == 0) {
                 ansText = ansText + "\ny = " + df.format(ans.get(1, 0));
             } else {
-                ansText = ansText + "\ny = " + df2.format(ans.get(1, 0));
+                ansText = ansText + "\ny = " + Fractions.convertDecimalToFraction(ans.get(1, 0));
             }
 
             if ((Double.parseDouble(df2.format(ans.get(2, 0))) % 1) == 0) {
                 ansText = ansText + "\nz = " + df.format(ans.get(2, 0));
             } else {
-                ansText = ansText + "\nz = " + df2.format(ans.get(2, 0));
+                ansText = ansText + "\nz = " + Fractions.convertDecimalToFraction(ans.get(2, 0));
             }
         return ansText;
     }
@@ -110,6 +112,7 @@ public class SolverLinearEquation extends AppCompatActivity {
             linear.setVisibility(View.VISIBLE);
         } catch (Exception e) {
             Toast.makeText(this, "linear equation is not possible to solve", Toast.LENGTH_SHORT).show();
+            Log.d("kimkim",""+e);
         }
 
 

@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bulsu.mathpad.R;
+import com.bulsu.mathpad.activity.solver.Fractions;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -43,7 +44,7 @@ public class SolverMatrix extends AppCompatActivity {
         answer.clear();
         String arr[] = new String[]{"A + B", "A - B"};
         mScrollView = (ScrollView) findViewById(R.id.scrollView);
-                spinner = (Spinner) findViewById(R.id.spinnerChoose);
+        spinner = (Spinner) findViewById(R.id.spinnerChoose);
         spinner.setAdapter(new ArrayAdapter<String>(this, R.layout.spinne_layout, R.id.tv_spinner, arr));
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -111,7 +112,7 @@ public class SolverMatrix extends AppCompatActivity {
         });
         View view = this.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
@@ -142,7 +143,6 @@ public class SolverMatrix extends AppCompatActivity {
     }
 
     public void solve3x3multiplication() {
-
 
 
         try {
@@ -200,10 +200,8 @@ public class SolverMatrix extends AppCompatActivity {
                     count++;
                 }
             }
-        }
-        catch (Exception ex)
-        {
-            Log.d("kim",ex+"");
+        } catch (Exception ex) {
+            Log.d("kim", ex + "");
         }
     }
 
@@ -211,14 +209,14 @@ public class SolverMatrix extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0");
         DecimalFormat df2 = new DecimalFormat("0.00");
         for (int i = 0; i < 9; i++) {
-            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString())))+Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
-            if ((a % 1) == 0){
-                answer.get(i).setText(df.format(a)+"");
-            }
-            else{
-                answer.get(i).setText(df2.format(a)+"");
+            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString()))) + Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
+            if ((a % 1) == 0) {
+                answer.get(i).setText(df.format(a) + "");
+            } else {
+                answer.get(i).setText(Fractions.convertDecimalToFraction(a) + "");
             }
         }
+
         linearAnswer.setVisibility(View.VISIBLE);
     }
 
@@ -226,14 +224,14 @@ public class SolverMatrix extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0");
         DecimalFormat df2 = new DecimalFormat("0.00");
         for (int i = 0; i < 9; i++) {
-            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString())))-Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
-            if ((a % 1) == 0){
-                answer.get(i).setText(df.format(a)+"");
-            }
-            else{
-                answer.get(i).setText(df2.format(a)+"");
+            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString()))) - Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
+            if ((a % 1) == 0) {
+                answer.get(i).setText(df.format(a) + "");
+            } else {
+                answer.get(i).setText(Fractions.convertDecimalToFraction(a) + "");
             }
         }
+
         linearAnswer.setVisibility(View.VISIBLE);
     }
 

@@ -48,19 +48,6 @@ public class DeterminantsActivity extends AppCompatActivity {
     private void setupPager() {
 
         CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8", "Page 9", "Page 10", "Page 11", "Page 12", "Page 13", "Page 14"};
-        int layoutResourceId[] = {R.layout.determinants1, R.layout.determinants2,
-                R.layout.determinants3, R.layout.determinants4, R.layout.determinants5, R.layout.determinants6, R.layout.determinants7,
-                R.layout.determinants8, R.layout.determinants9, R.layout.determinants10, R.layout.determinants11, R.layout.determinants12, R.layout.determinants13, R.layout.determinants14};
 
-        adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, layoutResourceId);
-        pager.setAdapter(adapter);
-        tabs.setViewPager(pager);
-        tabs.setDistributeEvenly(true);
-        tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
-            @Override
-            public int getIndicatorColor(int position) {
-                return getResources().getColor(android.R.color.white);
-            }
-        });
     }
 }
