@@ -1,10 +1,459 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_quiz_linear_system"
+    android:id="@+id/activity_quiz_determinants1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bulsu.mathpad.activity.quiz.QuizLinearSystem">
+    android:orientation="vertical"
+    tools:context="com.bulsu.mathpad.activity.quiz.QuizDeterminants1Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls1"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb1a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (2, 3) "
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (-2, 3)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (3, 2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (3, -2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls2"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb2a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (1, 3)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (3, 1)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (3/2, ½)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (1/2, 3/2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls3"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb3a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (7, 9, 13)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (7, 13, 9)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (13, 9, 7)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (9, 13, 7)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls4"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb4a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (3, 5, -2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (-2, 5, 3)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-2, 3, 5)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (3, 5, -2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls5"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb5a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (3, -2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (-2, 3)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-3, 2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (2, 3)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls6"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb6a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (½, 4)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (4, ½)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-1/2, 4)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (4, -1/2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls7"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb7a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (2, -3, 7)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (7, -3, 2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-3, 2, -7) "
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (-7, -3, 2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls8"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb8a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (7, 9)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (9, 7) "
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-7, 9)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (9, -7)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls9"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb9a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (4, 7, -2)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (4, -2, 7)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (-2, 4, 7)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (7, 4, -2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizls10"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb10a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. (3, 2, 1)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. (1, 2, 3)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. (2, 3, 1)"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. (3, 1, 2)"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

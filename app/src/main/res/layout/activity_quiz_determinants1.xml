@@ -1,10 +1,457 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_quiz_determinants1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.bulsu.mathpad.activity.quiz.QuizDeterminants1Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="32dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="The determinants of sum of two n x n matrices is not equal to the sum of their"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb1a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Determinants"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Minor Aij"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Elements of A"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb1d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. Cofactors"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="2.	It is only applicable to cases where we have “n” equations in n unknowns and where the coefficient matrix A is non-singular."
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb2a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. Cofactor of A"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. Determinants"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. Cramer's rule"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb2d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. Ad-joint of A"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_3"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb3a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="54"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 53"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -54"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb3d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. -53"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_4"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb4a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="114"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 78"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -78"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb4d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. 114"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_5"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb5a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. -8"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 10"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -10"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb5d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. -8"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_6"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb6a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. 128"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 28"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -108"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb6d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. -120"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_7"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb7a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. 15"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 14"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. 16"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb7d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. 13"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_8"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb8a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. 74"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 75"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. 76"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb8d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. 73"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_9"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb9a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. -279"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 287"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -312"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb9d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. -345"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/quizdet1_10"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb10a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A. -11"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="B. 17"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10c"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="C. -17"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rb10d"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="D. 11"
+                    android:textColor="#fff" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

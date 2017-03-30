@@ -49,7 +49,15 @@
         <activity android:name=".activity.solver.matrices.SolverMatrix" />
         <activity android:name=".activity.solver.matrices.SolverMatrix2" />
         <activity android:name=".activity.solver.matrices.SolverMatrix3" />
-        <activity android:name=".activity.lesson.linearequation.WordProblemActivity"></activity>
+        <activity android:name=".activity.lesson.linearequation.WordProblemActivity" />
+        <activity android:name=".activity.quiz.QuizDeterminants1Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.quiz.QuizLinearSystem"></activity>
     </application>
 
 </manifest>
