@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -19,8 +18,10 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class QuizLinearSystem extends AppCompatActivity {
+public class QuizMatricesActivity extends AppCompatActivity {
 
+    @Bind(R.id.tvQuestion1)
+    TextView tvQuestion1;
     @Bind(R.id.rb1a)
     RadioButton rb1a;
     @Bind(R.id.rb1b)
@@ -29,6 +30,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb1c;
     @Bind(R.id.rb1d)
     RadioButton rb1d;
+    @Bind(R.id.tvQuestion2)
+    TextView tvQuestion2;
     @Bind(R.id.rb2a)
     RadioButton rb2a;
     @Bind(R.id.rb2b)
@@ -37,6 +40,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb2c;
     @Bind(R.id.rb2d)
     RadioButton rb2d;
+    @Bind(R.id.tvQuestion3)
+    TextView tvQuestion3;
     @Bind(R.id.rb3a)
     RadioButton rb3a;
     @Bind(R.id.rb3b)
@@ -45,6 +50,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb3c;
     @Bind(R.id.rb3d)
     RadioButton rb3d;
+    @Bind(R.id.tvQuestion4)
+    TextView tvQuestion4;
     @Bind(R.id.rb4a)
     RadioButton rb4a;
     @Bind(R.id.rb4b)
@@ -53,6 +60,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb4c;
     @Bind(R.id.rb4d)
     RadioButton rb4d;
+    @Bind(R.id.tvQuestion5)
+    TextView tvQuestion5;
     @Bind(R.id.rb5a)
     RadioButton rb5a;
     @Bind(R.id.rb5b)
@@ -61,6 +70,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb5c;
     @Bind(R.id.rb5d)
     RadioButton rb5d;
+    @Bind(R.id.tvQuestion6)
+    TextView tvQuestion6;
     @Bind(R.id.rb6a)
     RadioButton rb6a;
     @Bind(R.id.rb6b)
@@ -69,6 +80,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb6c;
     @Bind(R.id.rb6d)
     RadioButton rb6d;
+    @Bind(R.id.tvQuestion7)
+    TextView tvQuestion7;
     @Bind(R.id.rb7a)
     RadioButton rb7a;
     @Bind(R.id.rb7b)
@@ -77,6 +90,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb7c;
     @Bind(R.id.rb7d)
     RadioButton rb7d;
+    @Bind(R.id.tvQuestion8)
+    TextView tvQuestion8;
     @Bind(R.id.rb8a)
     RadioButton rb8a;
     @Bind(R.id.rb8b)
@@ -85,6 +100,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb8c;
     @Bind(R.id.rb8d)
     RadioButton rb8d;
+    @Bind(R.id.tvQuestion9)
+    TextView tvQuestion9;
     @Bind(R.id.rb9a)
     RadioButton rb9a;
     @Bind(R.id.rb9b)
@@ -93,6 +110,8 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb9c;
     @Bind(R.id.rb9d)
     RadioButton rb9d;
+    @Bind(R.id.tvQuestion10)
+    TextView tvQuestion10;
     @Bind(R.id.rb10a)
     RadioButton rb10a;
     @Bind(R.id.rb10b)
@@ -103,77 +122,57 @@ public class QuizLinearSystem extends AppCompatActivity {
     RadioButton rb10d;
     @Bind(R.id.btnSubmit)
     Button btnSubmit;
-    @Bind(R.id.activity_quiz_determinants1)
-    LinearLayout activityQuizDeterminants1;
-    @Bind(R.id.tvQuestion1)
-    TextView tvQuestion1;
-    @Bind(R.id.tvQuestion2)
-    TextView tvQuestion2;
-    @Bind(R.id.tvQuestion3)
-    TextView tvQuestion3;
-    @Bind(R.id.tvQuestion4)
-    TextView tvQuestion4;
-    @Bind(R.id.tvQuestion5)
-    TextView tvQuestion5;
-    @Bind(R.id.tvQuestion6)
-    TextView tvQuestion6;
-    @Bind(R.id.tvQuestion7)
-    TextView tvQuestion7;
-    @Bind(R.id.tvQuestion8)
-    TextView tvQuestion8;
-    @Bind(R.id.tvQuestion9)
-    TextView tvQuestion9;
-    @Bind(R.id.tvQuestion10)
-    TextView tvQuestion10;
     @Bind(R.id.btnRetake)
     Button btnRetake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_linear_system);
+        setContentView(R.layout.activity_quiz_matrices);
         ButterKnife.bind(this);
 
-        setTitle("System of Linear Equation");
+        setTitle("Matrices");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void onSubmitClick() {
         int score = 0;
 
-        if (rb1c.isChecked())
+        if (rb1d.isChecked())
             score++;
 
-        if (rb2a.isChecked())
+        if (rb2b.isChecked())
             score++;
 
-        if (rb3b.isChecked())
+        if (rb3d.isChecked())
             score++;
 
-        if (rb4c.isChecked())
+        if (rb4b.isChecked())
             score++;
 
-        if (rb5a.isChecked())
+        if (rb5c.isChecked())
             score++;
 
-        if (rb6a.isChecked())
-            score++;
-        if (rb7d.isChecked())
+        if (rb6c.isChecked())
             score++;
 
-        if (rb8a.isChecked())
+        if (rb7a.isChecked())
+            score++;
+
+        if (rb8b.isChecked())
             score++;
 
         if (rb9c.isChecked())
             score++;
 
-        if (rb10b.isChecked())
+        if (rb10a.isChecked())
             score++;
-        btnSubmit.setVisibility(View.GONE);
-        btnRetake.setVisibility(View.VISIBLE);
 
         Log.d("score", "Total Score: " + score);
         displayScore(score);
+
+        btnSubmit.setVisibility(View.GONE);
+        btnRetake.setVisibility(View.VISIBLE);
     }
 
     private void displayScore(int score) {
@@ -187,12 +186,7 @@ public class QuizLinearSystem extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 finish();
             }
-        }).setNegativeButton("Retake", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                retake();
-            }
-        }).setNeutralButton("Review", new DialogInterface.OnClickListener() {
+        }).setNegativeButton("Review", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 review();
@@ -203,34 +197,34 @@ public class QuizLinearSystem extends AppCompatActivity {
 
     private void review() {
 
-        if (!rb1c.isChecked())
+        if (!rb1d.isChecked())
             tvQuestion1.setBackgroundColor(Color.RED);
 
-        if (!rb2a.isChecked())
+        if (!rb2b.isChecked())
             tvQuestion2.setBackgroundColor(Color.RED);
 
-        if (!rb3b.isChecked())
+        if (!rb3d.isChecked())
             tvQuestion3.setBackgroundColor(Color.RED);
 
-        if (!rb4c.isChecked())
+        if (!rb4b.isChecked())
             tvQuestion4.setBackgroundColor(Color.RED);
 
-        if (!rb5a.isChecked())
+        if (!rb5c.isChecked())
             tvQuestion5.setBackgroundColor(Color.RED);
 
-        if (!rb6a.isChecked())
+        if (!rb6c.isChecked())
             tvQuestion6.setBackgroundColor(Color.RED);
 
-        if (!rb7d.isChecked())
+        if (!rb7a.isChecked())
             tvQuestion7.setBackgroundColor(Color.RED);
 
-        if (!rb8a.isChecked())
+        if (!rb8b.isChecked())
             tvQuestion8.setBackgroundColor(Color.RED);
 
         if (!rb9c.isChecked())
             tvQuestion9.setBackgroundColor(Color.RED);
 
-        if (!rb10b.isChecked())
+        if (!rb10a.isChecked())
             tvQuestion10.setBackgroundColor(Color.RED);
 
     }
@@ -300,7 +294,6 @@ public class QuizLinearSystem extends AppCompatActivity {
 
         btnSubmit.setVisibility(View.VISIBLE);
         btnRetake.setVisibility(View.GONE);
-
     }
 
     @Override
@@ -318,11 +311,9 @@ public class QuizLinearSystem extends AppCompatActivity {
     @OnClick({R.id.btnSubmit, R.id.btnRetake})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnSubmit:
-                onSubmitClick();
+            case R.id.btnSubmit: onSubmitClick();
                 break;
-            case R.id.btnRetake:
-                retake();
+            case R.id.btnRetake: retake();
                 break;
         }
     }

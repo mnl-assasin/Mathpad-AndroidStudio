@@ -21,6 +21,7 @@ import org.apache.commons.math3.linear.RealMatrix;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+
 public class SolverInverse3 extends AppCompatActivity {
     ArrayList<EditText> numbers1 = new ArrayList<>();
     ArrayList<TextView> answer = new ArrayList<>();

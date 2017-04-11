@@ -45,8 +45,8 @@ public class GaussianGaussJordanActivity extends AppCompatActivity {
     
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5"};
-        int id[] = {R.drawable.m7_1, R.drawable.m7_2, R.drawable.m7_3, R.drawable.m7_4, R.drawable.m7_5};
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6"};
+        int id[] = {R.drawable.m7_1, R.drawable.m7_2, R.drawable.m7_3, R.drawable.m7_4, R.drawable.m7_5, R.drawable.m7_6};
         LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);

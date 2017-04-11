@@ -15,8 +15,8 @@ import android.widget.FrameLayout;
 
 import com.bulsu.mathpad.R;
 import com.bulsu.mathpad.fragment.AboutFragment;
-import com.bulsu.mathpad.fragment.FragmentQuiz2;
 import com.bulsu.mathpad.fragment.LessonsFragment;
+import com.bulsu.mathpad.fragment.QuizzesFragment;
 import com.bulsu.mathpad.fragment.SolverFragment;
 
 import butterknife.Bind;
@@ -108,8 +108,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 title = "Choose a Lesson";
                 break;
             case R.id.menu_quizzes:
-//                mFragment = new QuizzesFragment();
-                mFragment = new FragmentQuiz2();
+                mFragment = new QuizzesFragment();
+//                mFragment = new FragmentQuiz2();
                 title = "Choose a Quiz";
                 break;
             case R.id.menu_solver:

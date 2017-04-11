@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.bulsu.mathpad.R;
 import com.bulsu.mathpad.activity.quiz.QuizDeterminants1Activity;
 import com.bulsu.mathpad.activity.quiz.QuizLinearSystem;
+import com.bulsu.mathpad.activity.quiz.QuizMatricesActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -57,6 +58,7 @@ public class QuizzesFragment extends Fragment {
                 startActivity(new Intent(getActivity(), QuizLinearSystem.class));
                 break;
             case R.id.btnMatrices:
+                startActivity(new Intent(getActivity(), QuizMatricesActivity.class));
                 break;
             case R.id.btnDeterminants:
                 startActivity(new Intent(getActivity(), QuizDeterminants1Activity.class));

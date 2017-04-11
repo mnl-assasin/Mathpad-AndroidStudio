@@ -10,8 +10,10 @@ import com.bulsu.mathpad.adapter.LessonBaseAdapter;
 import com.bulsu.mathpad.sliding.SlidingTabLayout;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class LessonDeterminantsActivity extends AppCompatActivity {
+
 
     @Bind(R.id.tabs)
     SlidingTabLayout tabs;
@@ -22,6 +24,7 @@ public class LessonDeterminantsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_lesson_container);
+        ButterKnife.bind(this);
 
         setTitle("Determinants");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -43,9 +46,9 @@ public class LessonDeterminantsActivity extends AppCompatActivity {
     private void setupPager() {
 
         CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8", "Page 9", "Page 10",
-                "Page 11", "Page 12", "Page 13", "Page 14", "Page 15", "Page 16", "Page 17"};
+                "Page 11", "Page 12", "Page 13", "Page 14", "Page 15", "Page 16", "Page 17", "Page 18"};
         int id[] = {R.drawable.d1_1, R.drawable.d1_2, R.drawable.d1_3, R.drawable.d1_4, R.drawable.d1_5, R.drawable.d1_6, R.drawable.d1_7, R.drawable.d1_8, R.drawable.d1_9, R.drawable.d1_10,
-                R.drawable.d1_11, R.drawable.d1_12, R.drawable.d1_13, R.drawable.d1_14, R.drawable.d1_15, R.drawable.d1_16, R.drawable.d1_17};
+                R.drawable.d1_11, R.drawable.d1_12, R.drawable.d1_13, R.drawable.d1_14, R.drawable.d1_15, R.drawable.d1_16, R.drawable.d1_17, R.drawable.d1_18};
         LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);

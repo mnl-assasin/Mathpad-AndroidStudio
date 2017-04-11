@@ -30,7 +30,7 @@ public class SolverMatrix3 extends AppCompatActivity {
     TextView tv_answer;
     LinearLayout linearAnswer;
     Spinner spinner;
-    int methodChoosed = 0;
+    int methodChoosed=0;
     ScrollView mScrollView;
 
     @Override
@@ -89,7 +89,7 @@ public class SolverMatrix3 extends AppCompatActivity {
             try {
                 solve2x2plus();
             } catch (Exception e) {
-                Log.d("kimkim", "" + e);
+                Log.d("kimkim",""+e);
             }
         } else if (methodChoosed == 1) {
             solve2x2minus();
@@ -104,7 +104,7 @@ public class SolverMatrix3 extends AppCompatActivity {
 
         View view = this.getCurrentFocus();
         if (view != null) {
-            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
     }
@@ -136,7 +136,7 @@ public class SolverMatrix3 extends AppCompatActivity {
 
     public void solve2x2multiplication() {
         try {
-            int m, n, p, q, c, d, k;
+            int m, n, p, q,  c, d, k;
             double sum = 0;
             m = 2;
             n = 2;
@@ -182,16 +182,19 @@ public class SolverMatrix3 extends AppCompatActivity {
             DecimalFormat df2 = new DecimalFormat("0.00");
             for (c = 0; c < m; c++) {
                 for (d = 0; d < q; d++) {
-                    if ((Double.parseDouble(df2.format(multiply[c][d])) % 1) == 0) {
+                    if((Double.parseDouble(df2.format(multiply[c][d])) % 1) == 0) {
                         answer.get(count).setText(df.format(multiply[c][d]) + "");
-                    } else {
+                    }
+                    else {
                         answer.get(count).setText(df2.format(multiply[c][d]) + "");
                     }
                     count++;
                 }
             }
-        } catch (Exception ex) {
-            Log.d("kim", ex + "");
+        }
+        catch (Exception ex)
+        {
+            Log.d("kim",ex+"");
         }
     }
 
@@ -199,12 +202,13 @@ public class SolverMatrix3 extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0");
         DecimalFormat df2 = new DecimalFormat("0.00");
         for (int i = 0; i < 4; i++) {
-            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString()))) + Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
-            if ((a % 1) == 0) {
-                answer.get(i).setText(df.format(a) + "");
-            } else {
-                answer.get(i).setText(df2.format(a) + "");
-            }
+           double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString())))+Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
+          if ((a % 1) == 0){
+              answer.get(i).setText(df.format(a)+"");
+          }
+            else{
+              answer.get(i).setText(df2.format(a)+"");
+          }
         }
         linearAnswer.setVisibility(View.VISIBLE);
     }
@@ -213,11 +217,12 @@ public class SolverMatrix3 extends AppCompatActivity {
         DecimalFormat df = new DecimalFormat("0");
         DecimalFormat df2 = new DecimalFormat("0.00");
         for (int i = 0; i < 4; i++) {
-            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString()))) - Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
-            if ((a % 1) == 0) {
-                answer.get(i).setText(df.format(a) + "");
-            } else {
-                answer.get(i).setText(Fractions.convertDecimalToFraction(a) + "");
+            double a = Double.parseDouble(df2.format(Double.parseDouble(numbers1.get(i).getText().toString())))-Double.parseDouble(df2.format(Double.parseDouble(numbers2.get(i).getText().toString())));
+            if ((a % 1) == 0){
+                answer.get(i).setText(df.format(a)+"");
+            }
+            else{
+                answer.get(i).setText(Fractions.convertDecimalToFraction(a)+"");
             }
         }
         linearAnswer.setVisibility(View.VISIBLE);

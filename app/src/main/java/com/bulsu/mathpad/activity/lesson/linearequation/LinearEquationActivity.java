@@ -45,9 +45,9 @@ public class LinearEquationActivity extends AppCompatActivity {
 
     private void setupPager() {
 
-        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8", "Page 9", "Page 10"};
+        CharSequence titles[] = {"Page 1", "Page 2", "Page 3", "Page 4", "Page 5", "Page 6", "Page 7", "Page 8", "Page 9", "Page 10", "Page 11"};
 
-        int id[] = {R.drawable.s1_1, R.drawable.s1_2, R.drawable.s1_3, R.drawable.s1_4, R.drawable.s1_5, R.drawable.s1_6, R.drawable.s1_7, R.drawable.s1_8, R.drawable.s1_9, R.drawable.s1_10};
+        int id[] = {R.drawable.s1_1, R.drawable.s1_2, R.drawable.s1_3, R.drawable.s1_4, R.drawable.s1_5, R.drawable.s1_6, R.drawable.s1_7, R.drawable.s1_8, R.drawable.s1_9, R.drawable.s1_10, R.drawable.s1_11};
         LessonBaseAdapter adapter = new LessonBaseAdapter(getSupportFragmentManager(), titles, id);
         pager.setAdapter(adapter);
         tabs.setViewPager(pager);

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -106,6 +105,30 @@ public class QuizDeterminants1Activity extends AppCompatActivity {
     Button btnSubmit;
     @Bind(R.id.activity_quiz_determinants1)
     LinearLayout activityQuizDeterminants1;
+    @Bind(R.id.tvQuestion1)
+    TextView tvQuestion1;
+    @Bind(R.id.tvQuestion2)
+    TextView tvQuestion2;
+    @Bind(R.id.tvQuestion3)
+    TextView tvQuestion3;
+    @Bind(R.id.tvQuestion4)
+    TextView tvQuestion4;
+    @Bind(R.id.tvQuestion5)
+    TextView tvQuestion5;
+    @Bind(R.id.tvQuestion6)
+    TextView tvQuestion6;
+    @Bind(R.id.tvQuestion7)
+    TextView tvQuestion7;
+    @Bind(R.id.tvQuestion8)
+    TextView tvQuestion8;
+    @Bind(R.id.tvQuestion9)
+    TextView tvQuestion9;
+    @Bind(R.id.tvQuestion10)
+    TextView tvQuestion10;
+
+
+    @Bind(R.id.btnRetake)
+    Button btnRetake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,77 +140,165 @@ public class QuizDeterminants1Activity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    @OnClick(R.id.btnSubmit)
-    public void onClick() {
+    public void onSubmitClick() {
         int score = 0;
+
         if (rb1a.isChecked())
             score++;
-        else
-            rb1a.setBackgroundColor(Color.RED);
 
         if (rb2c.isChecked())
             score++;
-        else
-            rb2c.setBackgroundColor(Color.RED);
 
         if (rb3b.isChecked())
             score++;
-        else
-            rb3b.setBackgroundColor(Color.RED);
 
         if (rb4a.isChecked())
             score++;
-        else
-            rb4a.setBackgroundColor(Color.RED);
 
         if (rb5d.isChecked())
             score++;
-        else
-            rb5d.setBackgroundColor(Color.RED);
 
         if (rb6c.isChecked())
             score++;
-        else
-            rb6c.setBackgroundColor(Color.RED);
 
         if (rb7d.isChecked())
             score++;
-        else
-            rb7d.setBackgroundColor(Color.RED);
 
         if (rb8a.isChecked())
             score++;
-        else
-            rb8a.setBackgroundColor(Color.RED);
 
         if (rb9d.isChecked())
             score++;
-        else
-            rb9d.setBackgroundColor(Color.RED);
 
         if (rb10c.isChecked())
             score++;
-        else
-            rb10c.setBackgroundColor(Color.RED);
 
         Log.d("score", "Total Score: " + score);
         displayScore(score);
+        btnSubmit.setVisibility(View.GONE);
+        btnRetake.setVisibility(View.VISIBLE);
     }
 
     private void displayScore(int score) {
 
-        View v = LayoutInflater.from(getApplicationContext()).inflate(R.layout.dialog_score, null);
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setView(v);
-
-        TextView tv = (TextView) v.findViewById(R.id.tv_score);
-        tv.setText(String.valueOf(score));
+        String message = "Your total score is " + score + "/ 10";
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Total Score");
+        builder.setMessage(message);
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
+                finish();
+            }
+        }).setNegativeButton("Review", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                review();
             }
         }).show();
+
+    }
+
+    private void review() {
+
+        if (!rb1a.isChecked())
+            tvQuestion1.setBackgroundColor(Color.RED);
+
+        if (!rb2c.isChecked())
+            tvQuestion2.setBackgroundColor(Color.RED);
+
+        if (!rb3b.isChecked())
+            tvQuestion3.setBackgroundColor(Color.RED);
+
+        if (!rb4a.isChecked())
+            tvQuestion4.setBackgroundColor(Color.RED);
+
+        if (!rb5d.isChecked())
+            tvQuestion5.setBackgroundColor(Color.RED);
+
+        if (!rb6c.isChecked())
+            tvQuestion6.setBackgroundColor(Color.RED);
+
+        if (!rb7d.isChecked())
+            tvQuestion7.setBackgroundColor(Color.RED);
+
+        if (!rb8a.isChecked())
+            tvQuestion8.setBackgroundColor(Color.RED);
+
+        if (!rb9d.isChecked())
+            tvQuestion9.setBackgroundColor(Color.RED);
+
+        if (!rb10c.isChecked())
+            tvQuestion10.setBackgroundColor(Color.RED);
+    }
+
+    private void retake() {
+
+        rb1a.setChecked(false);
+        rb1b.setChecked(false);
+        rb1c.setChecked(false);
+        rb1d.setChecked(false);
+
+        rb2a.setChecked(false);
+        rb2b.setChecked(false);
+        rb2c.setChecked(false);
+        rb2d.setChecked(false);
+
+        rb3a.setChecked(false);
+        rb3b.setChecked(false);
+        rb3c.setChecked(false);
+        rb3d.setChecked(false);
+
+        rb4a.setChecked(false);
+        rb4b.setChecked(false);
+        rb4c.setChecked(false);
+        rb4d.setChecked(false);
+
+        rb5a.setChecked(false);
+        rb5b.setChecked(false);
+        rb5c.setChecked(false);
+        rb5d.setChecked(false);
+
+        rb6a.setChecked(false);
+        rb6b.setChecked(false);
+        rb6c.setChecked(false);
+        rb6d.setChecked(false);
+
+        rb7a.setChecked(false);
+        rb7b.setChecked(false);
+        rb7c.setChecked(false);
+        rb7d.setChecked(false);
+
+        rb8a.setChecked(false);
+        rb8b.setChecked(false);
+        rb8c.setChecked(false);
+        rb8d.setChecked(false);
+
+        rb9a.setChecked(false);
+        rb9b.setChecked(false);
+        rb9c.setChecked(false);
+        rb9d.setChecked(false);
+
+        rb10a.setChecked(false);
+        rb10b.setChecked(false);
+        rb10c.setChecked(false);
+        rb10d.setChecked(false);
+
+        tvQuestion1.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion2.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion3.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion4.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion5.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion6.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion7.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion8.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion9.setBackgroundColor(Color.TRANSPARENT);
+        tvQuestion10.setBackgroundColor(Color.TRANSPARENT);
+
+        btnSubmit.setVisibility(View.VISIBLE);
+        btnRetake.setVisibility(View.GONE);
+
+
     }
 
     @Override
@@ -200,5 +311,17 @@ public class QuizDeterminants1Activity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @OnClick({R.id.btnSubmit, R.id.btnRetake})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnSubmit:
+                onSubmitClick();
+                break;
+            case R.id.btnRetake:
+                retake();
+                break;
+        }
     }
 }

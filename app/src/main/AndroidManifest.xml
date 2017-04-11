@@ -57,7 +57,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.quiz.QuizLinearSystem"></activity>
+        <activity android:name=".activity.quiz.QuizLinearSystem" />
+        <activity android:name=".activity.quiz.QuizMatricesActivity"></activity>
     </application>
 
 </manifest>

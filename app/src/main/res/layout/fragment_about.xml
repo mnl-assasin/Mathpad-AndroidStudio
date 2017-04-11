@@ -16,29 +16,48 @@
 
     <TextView
         android:layout_width="280dp"
-        android:layout_marginBottom="32dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
         android:text="@string/about_desc"
-        android:textColor="#fff" />
+        android:textColor="#fff"
+        android:typeface="serif" />
 
     <TextView
-        android:layout_width="wrap_content" android:text="Developer" android:textColor="#fff" android:textAppearance="?android:textAppearanceMedium" android:textStyle="bold" android:layout_marginBottom="16dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Developer"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:typeface="serif" />
 
     <TextView
-        android:layout_width="wrap_content" android:text="Aira Morela S. Tolentino" android:textColor="#fff"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aira Morela S. Tolentino"
+        android:textColor="#fff"
+        android:typeface="serif" />
 
     <TextView
-        android:layout_width="wrap_content" android:text="Clarence Anne S. de Leon" android:textColor="#fff"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clarence Anne S. de Leon"
+        android:textColor="#fff"
+        android:typeface="serif" />
 
     <TextView
-        android:layout_width="wrap_content" android:text="Erika Mae C. de Guzman " android:textColor="#fff"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Erika Mae C. de Guzman "
+        android:textColor="#fff"
+        android:typeface="serif" />
 
     <TextView
-        android:layout_width="wrap_content" android:text="Joana Marie M. Jacob" android:textColor="#fff"
-        android:layout_height="wrap_content" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Joana Marie M. Jacob"
+        android:textColor="#fff"
+        android:typeface="serif" />
 
 </LinearLayout>
